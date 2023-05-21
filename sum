@@ -1,0 +1,12 @@
+public class ArraySumCalculator {
+    public static int calculateArraySum(int[] array, int index) {
+        if (index < 0) return 0;
+        return array[index] + calculateArraySum(array, index - 1);
+    }
+
+    public static void main(String[] args) {
+        int[] numbers = { 1, 2, 3, 4, 5 };
+        int sum = calculateArraySum(numbers, numbers.length - 1);
+        System.out.println("The sum of the array is: " + sum);
+    }
+}
